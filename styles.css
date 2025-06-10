@@ -153,6 +153,6 @@ footer {
   }
 
   :root {
-    --navbar-height: 70px; /* Ajuste para móviles */
+    --navbar-height: 140px; /* Ajuste para móviles */
   }
 }
