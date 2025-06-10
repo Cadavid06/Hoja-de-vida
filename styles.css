@@ -1,167 +1,116 @@
-@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Montserrat:wght@300;400;500;600;700&display=swap");
-
+/* Custom CSS Variables */
 :root {
-  --azulOscuro: #2c3e50;
-  --azulClaro: #3498db;    
-  --verdeAgua: #1abc9c;
-  --blanco: #ecf0f1;
-  --text: #333; 
-  --sombra: rgba(0, 0, 0, 0.3);
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #1abc9c;
+  --light-bg: #f8f9fa;
+  --navbar-height: 35px; /* Altura del navbar + margen */
 }
 
-* {
-  margin: 0;
-  padding: 0;
+/* Custom Bootstrap Theme */
+.bg-primary {
+  background-color: var(--primary-color) !important;
 }
 
+.text-primary {
+  color: var(--secondary-color) !important;
+}
+
+/* Typography */
 body {
-  background-color: var(--blanco);
-  color: var(--text);
   font-family: "Montserrat", sans-serif;
-  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-.header {
-  background-color: var(--azulOscuro);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px var(--sombra);
+/* Solución para navegación con navbar fijo */
+section[id] {
+  scroll-margin-top: var(--navbar-height);
 }
 
-.header ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 5px 0;
+/* Alternativa más robusta si la anterior no funciona */
+section[id]::before {
+  content: "";
+  display: block;
+  height: var(--navbar-height);
+  margin-top: calc(-1 * var(--navbar-height));
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.header a {
-  color: var(--blanco);
-  text-decoration: none;
-  padding: 8px 15px;
-  margin: 0 4px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.header a:hover {
-  background-color: var(--azulClaro);
-  transform: translateY(-2px);
-}
-
-
-.box {
-  background: linear-gradient(135deg, var(--azulClaro), var(--verdeAgua));
-  color: white;
-  text-align: center;
-  padding: 45px 15px 30px;
-  margin-bottom: 30px;
-}
-
-.box h1 {
+.section-title {
   font-family: "Gabarito", sans-serif;
-  font-size: 35px;
-  margin-bottom: 20px;
-  font-weight: 800;
-}
-
-.box h2 {
-  font-size: 28px;
+  color: var(--primary-color);
+  font-size: 1.75rem;
   font-weight: 600;
-  margin-top: 15px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
 }
 
-#img {
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+#profile-img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid white;
+  object-position: center 20%;
   transition: transform 0.3s ease;
 }
 
-#img:hover {
+#profile-img:hover {
   transform: scale(1.05);
 }
 
-.content {
-  background-color: white;
+/* Navigation */
+.navbar-nav .nav-link {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Skills Cards */
+.skill-card {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
   border-radius: 8px;
-  padding: 30px;
-  margin: 0 auto 30px;
-  max-width: 900px;
-  box-shadow: 0 4px 12px var(--sombra);
+  border-left: 4px solid var(--accent-color);
 }
 
-.content h2 {
-  color: var(--azulOscuro);
+.skill-title {
   font-family: "Gabarito", sans-serif;
-  font-size: 28px;
-  margin: 30px 0 15px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--verdeAgua);
-}
-
-.content h2:first-child {
-  margin-top: 0;
-}
-
-.content p {
-  margin-bottom: 23px;
-  text-align: justify;
-}
-
-.content ul {
-  margin-left: 23px;
-  margin-bottom: 23px;
-}
-
-.content li {
-  margin-bottom: 11px;
-}
-
-.content strong {
-  color: var(--azulClaro);
-}
-
-.footer {
-  background-color: var(--azulOscuro);
-  color: white;
+  color: var(--primary-color);
+  font-size: 1.25rem;
   text-align: center;
-  padding: 30px;
-  border-top: 5px solid var(--verdeAgua);
+  margin-bottom: 1rem;
 }
 
-.footer h2 {
-  font-family: "Gabarito", sans-serif;
-  margin-bottom: 15px;
-  font-size: 27px;
+.skill-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #dee2e6;
 }
 
-@media (max-width: 768px) {
-  .content {
-    margin: 0 15px 30px;
-    padding: 23px;
-  }
+.skill-item:last-child {
+  border-bottom: none;
+}
 
-  .header a {
-    margin: 4px;
-  }
+.skill-item strong {
+  color: var(--secondary-color);
+}
 
-  .box h1 {
-    font-size: 30px;
-  }
-
-  .box h2 {
-    font-size: 23px;
-  }
-
-  #img {
-    width: 120px;
-    height: 120px;
-  }
+/* Animations */
+.card,
+.hero-section,
+footer {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -175,22 +124,35 @@ body {
   }
 }
 
-.content,
-.box,
-.footer {
-  animation: fadeIn 0.8s ease-out forwards;
+/* Navbar brand icon */
+.navbar-brand i {
+  font-size: 1.5rem;
+  vertical-align: middle;
 }
 
-#sk + ul li {
-  padding: 8px 0;
-  border-bottom: 1px dashed #e0e0e0;
+/* Text justify for better reading */
+.text-justify {
+  text-align: justify;
 }
 
-#sk + ul li:last-child {
-  border-bottom: none;
-}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #profile-img {
+    width: 120px;
+    height: 120px;
+  }
 
-#sk + ul li strong {
-  display: inline-block;
-}
+  .hero-section h1 {
+    font-size: 2rem;
+  }
 
+  .navbar-nav .nav-link {
+    margin: 0.25rem;
+    padding: 0.375rem 0.75rem !important;
+    font-size: 0.875rem;
+  }
+
+  :root {
+    --navbar-height: 70px; /* Ajuste para móviles */
+  }
+}

@@ -1,102 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hoja de vida</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos David Ricardo Reino - Desarrollador Full Stack</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <body>
-        <div class="header">
-            <ul>
-                <a href="#info">Perfil profesional</a>
-                <a href="#form">Formacion academica</a>
-                <a href="#exper">Experiencia laboral</a>
-                <a href="#sk">Skills</a>
-                <a href="#cont">Contacteme</a>
-            </ul>
+<body>
+    <!-- Header/Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container">
+            <!-- Brand/Logo (opcional) -->
+            <a class="navbar-brand fw-bold bi-person-workspace" href="#"> Dev</a>
+        
+            <!-- Hamburger Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <!-- Collapsible Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#info">Perfil profesional</a>
+                    <a class="nav-link" href="#form">Formación académica</a>
+                    <a class="nav-link" href="#exper">Experiencia</a>
+                    <a class="nav-link" href="#sk">Habilidades técnicas</a>
+                    <a class="nav-link" href="#cont">Contacto</a>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <div class="box">
-            <h1>Hoja de vida</h1>
-            <img id="img" src="img/imagen.jpeg" alt width="60">
-            <h2>Carlos David Ricardo Reino</h2>
+    <!-- Hero Section -->
+    <div class="hero-section text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Desarrollador Full Stack Junior</h1>
+            <img id="profile-img" src="img/Img.jpg" alt="Carlos David Ricardo Reino" 
+                 class="rounded-circle border border-white border-4 mb-3">
+            <h2 class="h3 mb-3">Carlos David Ricardo Reino</h2>
         </div>
+    </div>
 
-        <div class="content">
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-4 p-md-5">
 
-            <h2 id="info">Perfil profesional</h2>
-            <p>
-                Técnico en mantenimiento de equipos de
-                computo,
-                enfocado en la instalación y configuración de
-                software, mantenimiento y enzamblaje de hardware.
-                Actualmente cursando sexto semestre de
-                Ingeniería de Sistemas en la Universidad de
-                Córdoba, con habilidades generales en
-                programación, bases de datos y solución de
-                problemas tecnológicos.
-            </p>
+                        <!-- Perfil Profesional -->
+                        <section id="info" class="mb-5">
+                            <h2 class="section-title">Perfil profesional</h2>
+                            <p class="text-justify">
+                                <strong>Estudiante de Ingeniería de Sistemas</strong> (6to semestre) con experiencia práctica en 
+                                desarrollo de aplicaciones standalone y webs a través de proyectos académicos utilizando 
+                                <strong>Java</strong>, <strong>JavaScript</strong>, <strong>React</strong>, <strong>Node.js</strong> y 
+                                <strong>MySQL</strong>. He trabajado en proyectos <strong>Full Stack</strong> durante mi formación, 
+                                con especial interés en el desarrollo <strong>backend</strong> por encontrarlo más desafiante y estimulante. 
+                                Busco oportunidades remotas como <strong>Junior Developer</strong> o <strong>Trainee</strong> 
+                                donde pueda aplicar mis conocimientos y continuar aprendiendo en un entorno profesional.
+                            </p>
+                        </section>
 
-            <h2 id="form">Formacion academica</h2>
-            <ul>
-                <li>
-                    Técnico profesional en mantenimiento de equipos de computo -
-                    SENA
-                </li>
+                        <!-- Formación Académica -->
+                        <section id="form" class="mb-5">
+                            <h2 class="section-title">Formación académica</h2>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <strong>Ingeniería de Sistemas</strong> - Universidad de Córdoba
+                                    <span class="text-muted fst-italic ms-2">(6to semestre - En curso)</span>
+                                </li>
+                                <li class="mb-3">
+                                    <strong>Técnico en Mantenimiento de Equipos de Cómputo</strong> - SENA
+                                    <span class="text-muted fst-italic ms-2">(Graduado)</span>
+                                </li>
+                            </ul>
+                        </section>
 
-                <li>
-                    Ingeniería de Sistemas - Universidad de Córdoba (Actualmente
-                    cursando)
-                </li>
-            </ul>
+                        <!-- Experiencia -->
+                        <section id="exper" class="mb-5">
+                            <h2 class="section-title">Experiencia</h2>
+                            <div class="mb-3">
+                                <strong>Ayudante Técnico/Atención al Cliente</strong> - D'Click (CO)
+                                <span class="text-muted fst-italic ms-2">Jun. 2021 - Nov. 2021 (Pasantías)</span>
+                                <p class="text-muted mt-2 mb-0">Soporte técnico, mantenimiento de equipos y atención al cliente.</p>
+                            </div>
+                        </section>
 
-            <h2 id="exper">Experiencia laboral</h2>
-            <ul>
-                <li>
-                    D'Click (CO) - Ayudante técnico/Atención al cliente
-                    (Pasantías) - jun. 2021 / nov. 2021
-                </li>
-            </ul> 
+                        <!-- Habilidades Técnicas -->
+                        <section id="sk">
+                            <h2 class="section-title">Habilidades técnicas</h2>
+                            <div class="row g-4">
+                                <!-- Backend -->
+                                <div class="col-md-4">
+                                    <div class="skill-card h-100">
+                                        <h3 class="skill-title">Backend</h3>
+                                        <ul class="list-unstyled">
+                                            <li class="skill-item"><strong>Java:</strong> Programación Orientada a Objetos (POO)</li>
+                                            <li class="skill-item"><strong>Node.js + Express.js:</strong> APIs RESTful</li>
+                                            <li class="skill-item"><strong>MySQL:</strong> Diseño y consultas de BD</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-            <h2 id="sk">Skills</h2>
-            <ul>
-                <li><strong>Mantenimiento de Computadores:</strong> Instalación
-                    de sistemas operativos (Windows, Linux), configuración
-                    de
-                    drivers y resolución de errores de software.
-                </li>
-                <li><strong>Reparación de Hardware:</strong> Diagnóstico,
-                    ensamblaje y reemplazo de componentes.
-                </li>
-                <li><strong>Programación Orientada a Objetos:</strong>
-                    Desarrollo en Java.
-                </li>
-                <li><strong>Desarrollo Web:</strong> HTML y CSS (capacidad para
-                    crear páginas web con buen estilo).
-                </li>
-                <li><strong>JavaScript:</strong> Conocimientos esenciales.
-                </li>
-                <li><strong>Bases de Datos:</strong> SQL (creación de bases de
-                    datos, consultas y manejo básico).
-                </li>
-                <li><strong>Python:</strong> Conocimientos básicos.
-                </li>
-            </ul>
+                                <!-- Frontend -->
+                                <div class="col-md-4">
+                                    <div class="skill-card h-100">
+                                        <h3 class="skill-title">Frontend</h3>
+                                        <ul class="list-unstyled">
+                                            <li class="skill-item"><strong>React.js:</strong> Componentes y hooks</li>
+                                            <li class="skill-item"><strong>JavaScript:</strong> DOM manipulation</li>
+                                            <li class="skill-item"><strong>HTML5 & CSS3:</strong> Responsive design</li>
+                                            <li class="skill-item"><strong>Bootstrap:</strong> Framework CSS, componentes UI</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
+                                <!-- Herramientas -->
+                                <div class="col-md-4">
+                                    <div class="skill-card h-100">
+                                        <h3 class="skill-title">Herramientas</h3>
+                                        <ul class="list-unstyled">
+                                            <li class="skill-item"><strong>Git & GitHub:</strong> Control de versiones</li>
+                                            <li class="skill-item"><strong>Full Stack:</strong> Integración completa</li>
+                                            <li class="skill-item"><strong>Sistemas Operativos:</strong> Windows, Linux</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <h2 id="cont">Información de contacto</h2>
-
-            Carlos David Ricardo Reino <br>
-            +57 3017888043 <br>
-            carlos.ricardoreiino@gmail.com <br>
-
+    <!-- Footer -->
+    <footer id="cont" class="bg-primary text-white text-center py-4">
+        <div class="container">
+            <h2 class="h4 mb-3">Información de contacto</h2>
+            <div class="contact-info">
+                <p class="mb-2"><strong>Carlos David Ricardo Reino</strong></p>
+                <p class="mb-2">📱 +57 3017888043</p>
+                <p class="mb-2">📧 carlos.ricardoreiino@gmail.com</p>
+                <p class="mb-0">🌍 Disponible para trabajo remoto</p>
+            </div>
         </div>
+    </footer>
 
-    </body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
 </html>
